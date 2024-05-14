@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursovaya.bookshop.Controllers.CatalogUserController">
+    <children>
+        <AnchorPane prefHeight="138.0" prefWidth="900.0" style="-fx-background-color: #44944A;">
+            <children>
+                <Text fill="WHITE" layoutX="356.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КАТАЛОГ">
+                    <font>
+                        <Font size="44.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/programmer.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="backToHomeButton" layoutX="728.0" layoutY="7.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="165.0" style="-fx-background-color: #008000;" text="НАЗАД" textFill="WHITE">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Button>
+              <Label fx:id="helloLabel" layoutX="122.0" layoutY="14.0" prefHeight="36.0" prefWidth="239.0" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+      <TextField fx:id="searchTextField" layoutX="14.0" layoutY="157.0" prefHeight="26.0" prefWidth="203.0" promptText="Поиск по названию..." />
+      <Button fx:id="searchButton" layoutX="207.0" layoutY="157.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: #008000;" text="Найти" textFill="WHITE" />
+      <Label fx:id="descriptionLabel" layoutX="274.0" layoutY="161.0" text="Описание:" />
+      <ScrollPane fx:id="catalogScrollPane" layoutX="593.0" layoutY="138.0" prefHeight="562.0" prefWidth="306.0">
+         <content>
+            <VBox fx:id="catalogVBox" prefHeight="85.0" prefWidth="308.0" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="authorFilterField" layoutX="347.0" layoutY="621.0" promptText="Автор..." />
+      <TextField fx:id="costFilterField" layoutX="347.0" layoutY="647.0" promptText="Цена (до)..." />
+      <TextField fx:id="countFilterField" layoutX="347.0" layoutY="673.0" promptText="Количество (до)..." />
+      <Button fx:id="filterButton" layoutX="497.0" layoutY="620.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="95.0" style="-fx-background-color: #008000;" text="ПРИМЕНИТЬ&#10;ФИЛЬТР&#10;" textFill="WHITE" />
+      <VBox fx:id="VBoxForSearchedImage" layoutX="14.0" layoutY="183.0" prefHeight="361.0" prefWidth="247.0">
+         <children>
+            <ImageView fx:id="searchBookImage" fitHeight="361.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

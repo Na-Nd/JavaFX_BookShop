@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursovaya.bookshop.Controllers.TablesAdminController">
+    <children>
+        <AnchorPane prefHeight="138.0" prefWidth="900.0" style="-fx-background-color: #44944A;">
+            <children>
+                <Text fill="WHITE" layoutX="350.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ТАБЛИЦЫ">
+                    <font>
+                        <Font size="44.0" />
+                    </font>
+                </Text>
+                <Button fx:id="backToHomeButton" layoutX="728.0" layoutY="7.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="165.0" style="-fx-background-color: #008000;" text="НАЗАД" textFill="WHITE">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Button>
+                <Label fx:id="helloLabel" layoutX="122.0" layoutY="14.0" prefHeight="36.0" prefWidth="239.0" textFill="WHITE" />
+                <ImageView fitHeight="115.0" fitWidth="123.0" layoutX="21.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/admin.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <CheckBox fx:id="AdminsCheckBox" layoutX="770.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #008000;" text="Администраторы" textFill="WHITE" />
+        <CheckBox fx:id="sellersCheckBox" layoutX="770.0" layoutY="205.0" mnemonicParsing="false" style="-fx-background-color: #008000;" text="Продавцы" textFill="WHITE" />
+        <CheckBox fx:id="usersCheckBox" layoutX="770.0" layoutY="230.0" mnemonicParsing="false" style="-fx-background-color: #008000;" text="Пользователи" textFill="WHITE" />
+        <Button fx:id="applyTableButton" layoutX="791.0" layoutY="255.0" mnemonicParsing="false" style="-fx-background-color: #008000;" text="Применить" textFill="WHITE" />
+        <TableView fx:id="firstTableView" layoutY="139.0" prefHeight="346.0" prefWidth="761.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Имя" />
+                <TableColumn fx:id="surnameColumn" prefWidth="150.0" text="Фамилия" />
+                <TableColumn fx:id="loginColumn" prefWidth="150.0" text="Логин" />
+                <TableColumn fx:id="passwordColumn" prefWidth="150.0" text="Пароль" />
+            </columns>
+        </TableView>
+      <TextField fx:id="addPersonNameTextField" layoutX="15.0" layoutY="581.0" promptText="Имя..." />
+      <TextField fx:id="addPersonSurnameTextField" layoutX="15.0" layoutY="617.0" promptText="Фамилия..." />
+      <TextField fx:id="addPersonPasswordTextField" layoutX="178.0" layoutY="617.0" promptText="Пароль..." />
+      <TextField fx:id="addPersonLoginTextField" layoutX="179.0" layoutY="581.0" promptText="Логин..." />
+      <Button fx:id="addPersonButton" layoutX="337.0" layoutY="581.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="78.0" style="-fx-background-color: #008000;" text="Добавить&#10;персону&#10;" textFill="WHITE" />
+      <Button fx:id="deletePersonButton" layoutX="577.0" layoutY="617.0" mnemonicParsing="false" style="-fx-background-color: #008000;" text="Удалить персону" textFill="WHITE" />
+      <TextField fx:id="deletePersonIdTextField" layoutX="557.0" layoutY="581.0" promptText="ID..." />
+      <Label fx:id="infoLabel" layoutX="436.0" layoutY="528.0" textFill="RED" />
+    </children>
+</AnchorPane>

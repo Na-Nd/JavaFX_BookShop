@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursovaya.bookshop.Controllers.TablesSellerController">
+    <children>
+        <AnchorPane prefHeight="138.0" prefWidth="900.0" style="-fx-background-color: #44944A;">
+            <children>
+                <Text fill="WHITE" layoutX="350.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ТАБЛИЦЫ">
+                    <font>
+                        <Font size="44.0" />
+                    </font>
+                </Text>
+                <Button fx:id="backToHomeButton" layoutX="728.0" layoutY="7.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="165.0" style="-fx-background-color: #008000;" text="НАЗАД" textFill="WHITE">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Button>
+                <Label fx:id="helloLabel" layoutX="122.0" layoutY="14.0" prefHeight="36.0" prefWidth="239.0" textFill="WHITE" />
+            <ImageView fitHeight="115.0" fitWidth="123.0" layoutX="21.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sales-person.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="booksTableView" layoutX="50.0" layoutY="138.0" prefHeight="400" prefWidth="800">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" />
+                <TableColumn fx:id="nameColumn" text="Название книги" />
+                <TableColumn fx:id="authorColumn" text="Автор" />
+                <TableColumn fx:id="descriptionColumn" text="Описание" />
+                <TableColumn fx:id="imageLocationColumn" text="Файл картинки" />
+                <TableColumn fx:id="countColumn" text="Количество" />
+                <TableColumn fx:id="costColumn" text="Цена" />
+            </columns>
+        </TableView>
+      <TextField fx:id="changeCostIdTextField" layoutX="50.0" layoutY="627.0" promptText="Введите ID книги..." />
+      <TextField fx:id="changeCostTextField" layoutX="50.0" layoutY="660.0" promptText="Введите цену..." />
+      <Button fx:id="changeCostButton" layoutX="210.0" layoutY="627.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="76.0" style="-fx-background-color: #008000;" text="Поменять &#10;цену" textFill="WHITE" />
+      <TextField fx:id="nameTextField" layoutX="612.0" layoutY="592.0" prefHeight="26.0" prefWidth="76.0" promptText="Название" />
+      <TextField fx:id="authorTextField" layoutX="612.0" layoutY="627.0" prefHeight="26.0" prefWidth="76.0" promptText="Автор" />
+      <TextField fx:id="descriptionTextField" layoutX="612.0" layoutY="660.0" prefHeight="26.0" prefWidth="76.0" promptText="Описание" />
+      <TextField fx:id="imageLocationTextField" layoutX="696.0" layoutY="592.0" prefHeight="26.0" prefWidth="76.0" promptText="Картинка" />
+      <TextField fx:id="countTextField" layoutX="696.0" layoutY="627.0" prefHeight="26.0" prefWidth="76.0" promptText="Кол-во" />
+      <TextField fx:id="costTextField" layoutX="696.0" layoutY="660.0" prefHeight="26.0" prefWidth="76.0" promptText="Цена" />
+      <Button fx:id="addBookButton" layoutX="779.0" layoutY="592.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="70.0" style="-fx-background-color: #008000;" text="Добавить&#10;книгу" textFill="WHITE" />
+      <Button fx:id="deleteBookButton" layoutX="385.0" layoutY="627.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="98.0" style="-fx-background-color: #008000;" text="Удалить книгу" textFill="WHITE" />
+      <TextField fx:id="deleteBookIdTextField" layoutX="385.0" layoutY="592.0" prefHeight="26.0" prefWidth="98.0" promptText="ID" />
+      <Label fx:id="infoLabel" layoutX="385.0" layoutY="549.0" textFill="RED" />
+    </children>
+</AnchorPane>

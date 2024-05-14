@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursovaya.bookshop.Controllers.GraphsSellerController">
+    <children>
+        <AnchorPane prefHeight="138.0" prefWidth="900.0" style="-fx-background-color: #44944A;">
+            <children>
+                <Text fill="WHITE" layoutX="350.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ГРАФИКИ">
+                    <font>
+                        <Font size="44.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/sales-person.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="backToHomeButton" layoutX="728.0" layoutY="7.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="165.0" style="-fx-background-color: #008000;" text="НАЗАД" textFill="WHITE">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Button>
+                <Label fx:id="helloLabel" layoutX="122.0" layoutY="14.0" prefHeight="36.0" prefWidth="239.0" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+      <PieChart fx:id="authorsPieChart" layoutY="138.0" prefHeight="384.0" prefWidth="401.0" title="ТОП-3 АВТОРА" />
+      <BarChart fx:id="booksBarChart" layoutX="413.0" layoutY="138.0" prefHeight="400.0" prefWidth="486.0" title="ТОП-5 КНИГ">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+    </children>
+</AnchorPane>
